@@ -26,14 +26,14 @@
 ## Typography
 
 ### Body Copy
- */
+*/
 --font-size: 18px /* (paragraph) */
 
-/* ### Font */
+/* ### Font 
 --family: 'Outfit';
- /*
- [](https://fonts.google.com/specimen/Outfit) 
- */
+
+[](https://fonts.google.com/specimen/Outfit) 
+*/
 --regular:300 ;
 --semi-bold:400 ;
 --bold:600 ;
@@ -52,7 +52,7 @@ main {
     margin: 1.5rem;
     max-width:22rem ;
     border-radius: 1rem;
-    font-family: var(--family);
+    font-family: "Outfit", Sans-serif;
 }
 section.img {
     position: relative;
