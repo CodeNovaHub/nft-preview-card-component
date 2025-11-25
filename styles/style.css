@@ -1,0 +1,131 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+/* ## Colors */
+
+/* ### Primary */
+
+--blue500: hsl(215, 51%, 70%);
+--cyan400: hsl(178, 100%, 50%);
+--cyan100: hsl(178, 100%, 50%, 50%);
+
+/* ### Neutral */
+
+--blue950: hsl(217, 54%, 11%); /* (main BG) */
+--blue900: hsl(216, 50%, 16%); /* (card BG) */
+--blue800: hsl(215, 32%, 27%); /* (line) */
+--white: hsl(0, 0%, 100%);
+
+/* 
+## Typography
+
+### Body Copy
+ */
+--font-size: 18px /* (paragraph) */
+
+/* ### Font */
+--family: 'Outfit';
+ /*
+ [](https://fonts.google.com/specimen/Outfit) 
+ */
+--regular:300 ;
+--semi-bold:400 ;
+--bold:600 ;
+/* - Weights: 300, 400, 600 */
+}
+body {
+    background: var(--blue950);
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items:center;
+}
+main {
+    background: var(--blue900);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    max-width:22rem ;
+    border-radius: 1rem;
+    font-family: var(--family);
+}
+section.img {
+    position: relative;
+}
+section.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+section.img:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    border-radius: .5rem;
+    background: var(--cyan100) url("../images/icon-view.svg") no-repeat center center;
+    cursor: pointer;
+    
+}
+section.content {
+    color: var(--blue500);
+}
+section.content h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 1.5rem 0rem;
+    font-weight: var(--bold);
+    display: inline-block;
+}
+section.content h1:hover {
+    color: var(--cyan400);
+    cursor: pointer;
+}
+section.content p {
+    font-size: var(--font-size);
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+}
+.content .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--blue800);
+    padding-bottom: 1rem ;
+}
+.box .number, .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+}
+.number .eth {
+    color: var(--cyan400);
+    font-weight: var(--bold);
+}
+section.content .perfil {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:.2rem;
+}
+.perfil img {
+    width: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.perfil .name {
+    color: var(--white);
+    font-weight: var(--regular);
+}
+.perfil .name:hover {
+    color: var(--cyan400);
+    cursor: pointer;
+}
